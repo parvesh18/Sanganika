@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+#root{
+	display: flex;
+	flex-direction: column;
+} 
+
+.hero{
+	background-image: url("../public/assets/images/dduc.png");
+}
+
+.sec-container b{
+	@apply text-4xl 
+}
+.sec-container strong{
+	@apply text-4xl font-normal;
+	
+}
+
+@media (max-width : 1210px){
+	.box2 .box2-card2 p{
+		@apply text-base;
+	}
+	.box2 .box2-card2 strong{
+		@apply text-2xl;
+	}
+	.box2{
+		flex-direction: column;
+	}
+}
+
+@media (max-width:1025px){
+	.box1 b{
+		@apply text-3xl 
+	}
+	.box1 p{
+		@apply text-2xl
+	}
+	.box1-card2 p{
+		width: 100%;
+	}
+	.box2 .box2-card2 p{
+		width: 100%;
+		@apply text-lg;
+	}
+	
+}
+
+@media (max-width:800px){
+	.footer-cont .footer-boxes{
+		grid-template-columns: none;
+		grid-template-rows: repeat(3, auto);
+	}
+	.footer-cont .footer-boxes .footer-card:nth-child(2) p{
+		@apply self-start
+	}	
+	.footer-cont .footer-boxes .footer-card:nth-child(2) div{
+		@apply justify-start
+	}	
+
+	.box1 img{
+		width : 180px;
+		height : auto;
+	}
+	.hero p{
+		@apply text-xl
+	}
+}
+
+@media (max-width:630px){
+	.hero h1{
+		@apply text-2xl
+	}
+	.box1 img{
+		width: 150px;
+		height: auto;
+	}
+	.hero p{
+		@apply text-lg;
+	}
+	.box2 .box2-card2 p{
+		width: 100%;
+		@apply text-base;
+	}	
+}
+@media (max-width:536px){
+	.box1{
+		@apply flex-col;
+	}
+	.hero p{
+		@apply text-base;
+	}
+	.box2 .box2-card2 p{
+		width: 100%;
+		@apply text-sm;
+	}
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.academics .content {
+	overflow-y: scroll; /* Use 'auto' for scroll when needed */
+	max-height: calc(100dvh - 5rem); /* Adjust 4rem to your header height */
+}
+.academics .content::-webkit-scrollbar {
+	width: 16px;
+}
+.academics .content::-webkit-scrollbar-thumb {
+	background-color: #bcd1d9;
+	border-radius: 1rem;
+}
+
+.academics a {
+	@apply text-[#62C6FF] underline;
+}
+.academics h1 {
+	@apply text-4xl;
+}
+.academics h4 {
+	@apply text-2xl font-bold;
+}
+.academics li {
+	@apply text-base;
+}
+.academics .nested-li {
+	@apply marker:text-[#62C6FF] ml-4;
+}
+
+@media (max-width : 768px){
+	.academics .content {
+		@apply py-[3rem]
+	}
+	.academics .content .sem-container .header h1{
+		@apply text-3xl
+	}
+	.academics li {
+		@apply flex flex-col;
+	}
+	.academics .tab-nav{
+		@apply text-2xl;
+	}
+}
+@media (max-width : 425px){
+	.academics .content {
+		@apply px-[1.5rem]
+	}
+	.academics .content .sem-container .header h1{
+		@apply text-2xl
+	}
+	.academics li {
+		@apply text-sm ;
+	}
+	.academics .books .book{
+		flex-direction: column;
+	}
+	.academics .tab-nav{
+		@apply text-xl;
+	}
+	
+}
